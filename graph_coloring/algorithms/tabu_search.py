@@ -1,8 +1,8 @@
 import random
-from utils.solution_utils import cost, get_neighbour
+from utils.solution_utils import cost, get_neighbour, random_solution
 
 def tabu_search(graph, num_colors, tabu_size=None, max_iterations=1000):
-    current_solution = get_neighbour({}, num_colors)  # wygeneruj losowe
+    current_solution = random_solution(graph, num_colors)  # wygeneruj losowe
     best_solution = current_solution
     best_cost = cost(graph, best_solution)
     tabu_list = []
