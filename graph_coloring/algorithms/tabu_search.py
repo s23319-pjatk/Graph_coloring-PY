@@ -5,10 +5,10 @@ def tabu_search(graph, num_colors, tabu_size=None, max_iterations=1000):
     current_solution = random_solution(graph, num_colors)  # wygeneruj losowe
     best_solution = current_solution
     best_cost = cost(graph, best_solution)
-    tabu_list = []
+    tabu_list = []                                      #lista tabu przechowuje poprzednie rozwiazania
 
     for _ in range(max_iterations):
-        neighbors = [get_neighbour(current_solution, num_colors) for _ in range(100)]
+        neighbors = [get_neighbour(current_solution, num_colors) for _ in range(100)]   #rozwazamy 100 losowych sasiadow
         neighbors = [(n, cost(graph, n)) for n in neighbors]
         neighbors.sort(key=lambda x: x[1])  # sortuj po koszcie
 
@@ -30,6 +30,6 @@ def tabu_search(graph, num_colors, tabu_size=None, max_iterations=1000):
 
         tabu_list.append(current_solution)
         if tabu_size is not None and len(tabu_list) > tabu_size:
-            tabu_list.pop(0)
+            tabu_list.pop(0)                                     #utrzymujemy rozmiar listy tabu
 
-    return best_solution, best_cost
+    return best_solution, best_cost     #zwracamy najlepsze rozwiazanie

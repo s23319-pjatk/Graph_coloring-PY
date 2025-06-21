@@ -1,5 +1,5 @@
-import random
-import copy
+import random # modul ktory pozwala na losowe wybieranie elementow
+import copy  #modol ktory pozwala na tworzenie glebokich struktor dancyh
 
 def random_solution(graph, max_colors):
     return {node: random.randint(0, max_colors - 1) for node in graph}
@@ -16,6 +16,6 @@ def cost(graph, coloring):
     conflicts = 0
     for node in graph:
         for neighbor in graph[node]:
-            if coloring[node] == coloring[neighbor]:
+            if coloring[node] == coloring[neighbor]:    # ...jeśli mają ten sam kolor, to to jest konflikt
                 conflicts += 1
     return conflicts // 2  # każda para liczona podwójnie

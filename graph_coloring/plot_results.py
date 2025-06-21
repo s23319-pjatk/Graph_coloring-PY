@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Wczytaj dane z CSV
 results = {}
-with open("results.csv", newline="") as csvfile:
+with open("results.csv", newline="") as csvfile:    #plik csv
     reader = csv.DictReader(csvfile)
     for row in reader:
         method = row["method"]

@@ -1,0 +1,36 @@
+Wnioski z eksperymentu
+
+1. Jaki zestaw parametrów daje najlepsze wyniki dla każdej metody?
+
+Brute-force: Zawsze znajduje optymalne rozwiązanie (koszt 0), ale testowany tylko w jednej wersji.
+Hill-climbing: Znalazł rozwiązanie o koszcie 0.0 w każdej próbie – sprawdza się dobrze przy tym grafie i liczbie kolorów.
+Tabu search: Wszystkie testowane rozmiary tabu (3, 5, 7) dały koszt 0.0 –
+czyli każdy rozmiar tabu działa dobrze przy tym grafie.
+Wniosek: Wszystkie testowane parametry dały optymalny wynik (brak konfliktów),
+więc dla tego grafu nie widać istotnych różnic jakościowych między metodami.
+
+2. Jaka metoda kończy się najszybciej (dla najlepszych parametrów)?
+
+Brute-force: ~0.030 s
+Hill-climbing: ~0.030 s
+Tabu search: ~0.27 s dla każdej wersji tabu
+Wniosek: Brute-force i hill-climbing są najszybsze – około 9 razy szybsze niż tabu search w tym przypadku.
+
+Jaka metoda zużywa najmniej zasobów (dla najlepszych wyników)?
+
+Brute-force: ~86.02 KB
+Hill-climbing: ~84.61 KB
+Tabu search: ~84.74 – 84.75 KB
+Wniosek: Różnice są minimalne – jednak hill-climbing zużywa najmniej pamięci RAM spośród wszystkich metod.
+
+4. Jaka metoda najszybciej zbiega (dla najlepszych wyników)?
+Zbieżność tutaj oznacza czas potrzebny na znalezienie rozwiązania o koszcie 0.
+Skoro brute-force i hill-climbing osiągnęły koszt 0 w około 0.03 sekundy, a tabu potrzebował około 0.27 sekundy.
+To Brute-force i hill-climbing zbiegały najszybciej – tabu potrzebował zauważalnie więcej czasu,
+choć i tak poradził sobie skutecznie.
+
+
+Dokładność (koszt) - Wszystkie metody
+Szybkość działania - Hill-climbing / Brute
+Zużycie pamięci - Hill-climbing
+Zbieżność (szybkie rozwiązanie) - Hill-climbing / Brute

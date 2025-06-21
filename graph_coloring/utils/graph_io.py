@@ -7,6 +7,6 @@ def load_graph(file) -> dict:
 
     graph = {i: set() for i in range(n)}
     for u, v in edges:
-        graph[u].add(v)
+        graph[u].add(v) #sasiedzi
         graph[v].add(u)
     return graph

@@ -1,10 +1,9 @@
-import argparse
-from utils.graph_io import load_graph
-from utils.solution_utils import cost
-from algorithms import brute_force
-
+import argparse #biblioteka do obslugi z argumentow z lini komend
+from utils.graph_io import load_graph #funkcja wczytania grafu z pliku
+from utils.solution_utils import cost # import funkcji obliczeniowej kolorowa
+from algorithms import brute_force #algorytm zaimportowany
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser() #argumenty do odczytaia z terminala
     parser.add_argument("--file", help="Ścieżka do pliku z grafem (lub '-' dla stdin)", required=True)
     parser.add_argument("--colors", help="Liczba kolorów", type=int, required=True)
     parser.add_argument("--method", help="Metoda: brute, hill, tabu", required=True)
