@@ -17,11 +17,12 @@ URUCHAMIANIE:
 
 '''bash
 
-python main.py --file data/sample_graph.txt --colors 3 --method hill --iterations 100
+python main.py --file data/sample_graph.txt --colors 3 --method brute
+
+python main.py --file data/sample_graph.txt --colors 3 --method hill
 
 python main.py --file data/sample_graph.txt --colors 3 --method tabu --tabu_size 7
 
-python main.py --file data/sample_graph.txt --colors 3 --method brute
 
 Porownanie metod:
 python compare_methods.py
